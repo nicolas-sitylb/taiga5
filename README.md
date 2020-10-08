@@ -1,7 +1,7 @@
 # The fork
 
-This is a fork from [devinsolutions/taiga] image, which now is being
-officially maintained by Taigaio.
+This is a fork from [devinsolutions/taiga](https://github.com/devinsolutions/docker-taiga) image, 
+which now is being officially maintained by Taigaio.
 
 # Taiga Docker Image
 
