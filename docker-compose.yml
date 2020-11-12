@@ -13,7 +13,7 @@ services:
     volumes:
       - database:/var/lib/postgresql/data
   server:
-    image: devinsolutions/taiga:latest
+    image: taigaio/taiga5:latest
     command:
       - migrate
       # Make sure this command is run only during the initial setup as it will

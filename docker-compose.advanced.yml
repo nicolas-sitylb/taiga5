@@ -4,7 +4,7 @@ volumes:
   database:
   media:
 x-taiga-common: &taiga-common
-  image: devinsolutions/taiga:latest
+  image: taigaio/taiga5:latest
   volumes:
     - media:/srv/taiga-back/media
     - ./docker-compose/front.json:/etc/opt/taiga-front/conf.json:ro
@@ -27,7 +27,7 @@ services:
     volumes:
       - database:/var/lib/postgresql/data
   events:
-    image: devinsolutions/taiga-events:latest
+    image: taigaio/taiga-events5:latest
     deploy:
       replicas: 1
       update_config:
