@@ -37,6 +37,8 @@ With the default configuration, uWSGI is shutdown forcefully on `SIGTERM` and gr
 
 taiga-back persists data such as attachments in `/srv/taiga-back/media`.  **This directory is not a volume by default!**
 
+The database is persisted in a named volume, managed directly by docker.
+
 ### Populate the database with initial data
 
 You can populate the database by using `populate-db` command. Because this command will overwrite existing data, it is not run by default.
