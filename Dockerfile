@@ -21,6 +21,7 @@ RUN set -ex; \
         pcre-dev \
     ; \
     \
+    pip install --upgrade pip wheel setuptools; \
     pip install --no-cache-dir --no-compile 'uWSGI>=2.0,<2.1'; \
     \
     addgroup -g 101 -S taiga; \
@@ -40,8 +41,8 @@ RUN set -ex; \
     apk del .build-deps; \
     rm -rf /root/.cache /var/cache/apk/*
 # !!! DO NOT FORGET TO UPDATE "tags" FILE !!!
-ENV TAIGA_BACK_VERSION=5.5.7 \
-    TAIGA_BACK_SHA256SUM=1fe8fa792e3c5c12809cf29af73cb113e1d91f8a48450925ee3da5eecf721911
+ENV TAIGA_BACK_VERSION=5.5.9 \
+    TAIGA_BACK_SHA256SUM=b0c4eba0aef8fd2c0352a0485337230778f3dc64bb0f9e35f6a6806b96f0fac1
 RUN set -ex; \
     \
     export CFLAGS="-Os"; \
@@ -106,8 +107,8 @@ RUN set -ex; \
     apk del .build-deps; \
     rm -rf /root/.cache /var/cache/apk/*
 # !!! DO NOT FORGET TO UPDATE "tags" FILE !!!
-ENV TAIGA_FRONT_VERSION=5.5.8 \
-    TAIGA_FRONT_SHA256SUM=33054834d489d72bc5c95e932fa82de8f6fcf7656e11d23e959a7ce23aadfe6b
+ENV TAIGA_FRONT_VERSION=5.5.9 \
+    TAIGA_FRONT_SHA256SUM=b07f101fcdea5b76c83a7ee28415522fcbf622fc58d5290dffedb14773e52c45
 RUN set -ex; \
     \
     wget -q -O taiga-front-dist.tar.gz \
